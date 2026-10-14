@@ -45,6 +45,12 @@ We are excited to announce the initial release of **`mxping` v1.0.0** — a fast
 
 ## 📦 Installation & Getting Started
 
+### One-Line Install (macOS & Linux)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/yashbaddi/mxping/main/install.sh | bash
+```
+
 ### Pre-Built Binaries
 
 Download the appropriate archive for your operating system from the [Releases page](https://github.com/yashbaddi/mxping/releases):

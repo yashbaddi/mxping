@@ -26,16 +26,24 @@ For full command references, scripting recipes, and troubleshooting:
 
 ## Installation
 
+### One-Line Install (macOS & Linux)
+
 ```bash
-git clone https://github.com/yashbaddi/mxping.git
-cd mxping
-go build -o mxping ./cmd/mxping
+curl -fsSL https://raw.githubusercontent.com/yashbaddi/mxping/main/install.sh | bash
 ```
 
-Or install directly with Go:
+### Install via Go
 
 ```bash
 go install github.com/yashbaddi/mxping/cmd/mxping@latest
+```
+
+### Build from Source
+
+```bash
+git clone https://github.com/yashbaddi/mxping.git
+cd mxping
+make build
 ```
 
 ---
