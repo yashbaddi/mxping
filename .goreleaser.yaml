@@ -1,0 +1,108 @@
+# .goreleaser.yaml
+# Reference: https://goreleaser.com
+version: 2
+
+project_name: mxping
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: mxping
+    main: ./cmd/mxping
+    binary: mxping
+    flags:
+      - -trimpath
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X 'github.com/yashbaddi/mxping/internal/cli.AppVersion={{ .Version }}'
+
+archives:
+  - id: default
+    formats:
+      - tar.gz
+    name_template: >-
+      {{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    files:
+      - README.md
+      - LICENSE
+      - docs/*
+
+# Generates Linux system packages (.deb, .rpm, .apk)
+nfpms:
+  - id: packages
+    package_name: mxping
+    file_name_template: "{{ .PackageName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    vendor: "Yash Baddi"
+    homepage: "https://github.com/yashbaddi/mxping"
+    maintainer: "Yash Baddi"
+    description: "Fast, accurate email address verification & mailbox pinging CLI"
+    license: "MIT"
+    formats:
+      - deb
+      - rpm
+      - apk
+    bindir: /usr/local/bin
+
+checksum:
+  name_template: "checksums.txt"
+  algorithm: sha256
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-snapshot"
+
+changelog:
+  sort: asc
+  use: github
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
+      - "merge conflict"
+      - "Merge pull request"
+      - "Merge remote-tracking branch"
+  groups:
+    - title: "🚀 Features"
+      regexp: '^.*?feat(\([[:word:]]+\))??!?:.+$'
+      order: 0
+    - title: "🐛 Bug Fixes"
+      regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
+      order: 1
+    - title: "⚡ Performance Improvements"
+      regexp: '^.*?perf(\([[:word:]]+\))??!?:.+$'
+      order: 2
+    - title: "🧰 Maintenance"
+      regexp: '^.*?(refactor|chore|build)(\([[:word:]]+\))??!?:.+$'
+      order: 3
+    - title: "Others"
+      order: 999
+
+release:
+  github:
+    owner: yashbaddi
+    name: mxping
+  draft: false
+  prerelease: auto
+  mode: replace
+  header: |
+    ## mxping {{ .Tag }}
+    
+    Fast, accurate email verification and mailbox pinging CLI.
+  footer: |
+    **Full Changelog**: https://github.com/yashbaddi/mxping/compare/{{ .PreviousTag }}...{{ .Tag }}
+
