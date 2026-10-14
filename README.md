@@ -16,6 +16,14 @@ A fast, accurate email address verification and mailbox probing CLI tool written
 
 ---
 
+## Documentation
+
+For full command references, scripting recipes, and troubleshooting:
+- 📖 **[CLI Usage Guide](docs/cli-usage.md)**: Every flag, batch piping, `jq` recipes, and CI/CD setup.
+- 🛠️ **[Troubleshooting Guide](docs/troubleshooting.md)**: Handling ISP Port 25 blocking, Greylisting, and Catch-All servers.
+
+---
+
 ## Installation
 
 ```bash
