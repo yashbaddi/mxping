@@ -1,6 +1,19 @@
-# mxping
+<p align="center">
+  <img src="assets/logo.svg" alt="mxping logo" width="360" />
+</p>
 
-A fast, accurate email address verification and mailbox probing CLI tool written in Go with zero external dependencies.
+<p align="center">
+  <strong>Fast, accurate email address verification & mailbox pinging CLI with zero external dependencies.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/yashbaddi/mxping/releases"><img src="https://img.shields.io/github/v/release/yashbaddi/mxping?color=blue&style=flat-square" alt="Release"></a>
+  <a href="https://github.com/yashbaddi/mxping/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/yashbaddi/mxping/ci.yml?branch=main&label=CI&style=flat-square" alt="CI Status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License"></a>
+  <a href="https://goreportcard.com/report/github.com/yashbaddi/mxping"><img src="https://goreportcard.com/badge/github.com/yashbaddi/mxping?style=flat-square" alt="Go Report Card"></a>
+</p>
+
+---
 
 `mxping` verifies whether an email address actually exists and can receive mail without delivering any messages.
 
