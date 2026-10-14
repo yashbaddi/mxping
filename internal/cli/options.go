@@ -8,7 +8,8 @@ import (
 	"github.com/yashbaddi/mxping/internal/verifier"
 )
 
-const AppVersion = "0.1.0"
+// AppVersion represents the current version of mxping, overridable at build time via -ldflags.
+var AppVersion = "0.1.0"
 
 // Options represents the parsed command-line configuration.
 type Options struct {
