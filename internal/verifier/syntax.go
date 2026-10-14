@@ -10,7 +10,7 @@ import (
 var (
 	// domainRegex validates standard domain label format per RFC 1035 / RFC 5321.
 	domainLabelRegex = regexp.MustCompile(`^[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$`)
-	
+
 	// localPartRegex performs a sanity check on unquoted local parts.
 	// Matches standard ASCII letters, digits, and RFC-allowed printable special characters.
 	localPartRegex = regexp.MustCompile(`^[a-zA-Z0-9.!#$%&'*+/=?^_` + "`" + `{|}~-]+$`)
@@ -198,4 +198,3 @@ func ValidateSyntax(email string) (SyntaxResult, error) {
 		Domain:    domain,
 	}, nil
 }
-

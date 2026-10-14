@@ -39,4 +39,3 @@ func (p *SMTPProber) CheckCatchAll(ctx context.Context, mxHost string, domain st
 	res.IsCatchAll = false
 	return false, res, nil
 }
-

@@ -20,11 +20,11 @@ var (
 
 // SMTPOptions configures the SMTP probe behavior.
 type SMTPOptions struct {
-	Port        int
-	Timeout     time.Duration
-	HeloName    string
-	MailFrom    string
-	VerboseLog  func(format string, args ...any)
+	Port       int
+	Timeout    time.Duration
+	HeloName   string
+	MailFrom   string
+	VerboseLog func(format string, args ...any)
 }
 
 // DefaultSMTPOptions returns recommended default options for SMTP probing.

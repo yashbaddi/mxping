@@ -68,4 +68,3 @@ func (o *Options) ToVerifierConfig(logger func(format string, args ...any)) veri
 	cfg.VerboseLog = logger
 	return cfg
 }
-

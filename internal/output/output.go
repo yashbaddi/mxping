@@ -225,4 +225,3 @@ func (f *Formatter) reset() string {
 	}
 	return ""
 }
-

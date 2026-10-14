@@ -52,4 +52,3 @@ func ReadEmails(args []string, stdin io.Reader) ([]string, error) {
 
 	return emails, nil
 }
-

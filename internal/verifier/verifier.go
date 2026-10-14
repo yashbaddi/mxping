@@ -8,15 +8,15 @@ import (
 
 // Config configures the overall verification pipeline.
 type Config struct {
-	DNSServer       string
-	DNSTimeout      time.Duration
-	SMTPPort        int
-	SMTPTimeout     time.Duration
-	HeloName        string
-	MailFrom        string
-	CheckCatchAll   bool
-	CheckSMTP       bool
-	VerboseLog      func(format string, args ...any)
+	DNSServer     string
+	DNSTimeout    time.Duration
+	SMTPPort      int
+	SMTPTimeout   time.Duration
+	HeloName      string
+	MailFrom      string
+	CheckCatchAll bool
+	CheckSMTP     bool
+	VerboseLog    func(format string, args ...any)
 }
 
 // DefaultConfig returns safe and sensible defaults for email verification.
@@ -169,4 +169,3 @@ func (v *Verifier) Verify(ctx context.Context, email string) Result {
 	result.Duration = time.Since(startTime)
 	return result
 }
-

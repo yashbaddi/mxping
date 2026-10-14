@@ -56,13 +56,12 @@ type SMTPResult struct {
 
 // Result is the comprehensive output of the email verification pipeline.
 type Result struct {
-	Email       string        `json:"email"`
-	Status      Status        `json:"status"`
-	Syntax      SyntaxResult  `json:"syntax"`
-	DNS         DNSResult     `json:"dns"`
-	SMTP        SMTPResult    `json:"smtp"`
-	Duration    time.Duration `json:"duration_ms"`
-	ExecutedAt  time.Time     `json:"executed_at"`
-	SummaryMsg  string        `json:"summary_msg"`
+	Email      string        `json:"email"`
+	Status     Status        `json:"status"`
+	Syntax     SyntaxResult  `json:"syntax"`
+	DNS        DNSResult     `json:"dns"`
+	SMTP       SMTPResult    `json:"smtp"`
+	Duration   time.Duration `json:"duration_ms"`
+	ExecutedAt time.Time     `json:"executed_at"`
+	SummaryMsg string        `json:"summary_msg"`
 }
-

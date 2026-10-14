@@ -67,4 +67,3 @@ func TestVerifier_SyntaxAndDNS(t *testing.T) {
 		}
 	})
 }
-

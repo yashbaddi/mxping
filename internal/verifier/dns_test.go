@@ -59,4 +59,3 @@ func TestDNSResolver_Lookup_EmptyDomain(t *testing.T) {
 		t.Errorf("expected HasMX=false for empty domain")
 	}
 }
-

@@ -86,4 +86,3 @@ func TestFormatter_PrintBatchSummary(t *testing.T) {
 		t.Errorf("expected batch summary total 2, got: %s", out)
 	}
 }
-

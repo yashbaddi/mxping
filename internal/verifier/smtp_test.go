@@ -139,4 +139,3 @@ func TestSMTPProber_MockResponses(t *testing.T) {
 		}
 	})
 }
-

@@ -64,4 +64,3 @@ func TestParseOptions(t *testing.T) {
 		t.Errorf("unexpected remaining args: %v", remaining)
 	}
 }
-

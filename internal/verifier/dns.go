@@ -141,4 +141,3 @@ func (r *DNSResolver) Lookup(ctx context.Context, domain string) (DNSResult, err
 		Reason: reason,
 	}, ErrNoMailServer
 }
-

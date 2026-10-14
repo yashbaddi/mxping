@@ -14,8 +14,8 @@ import (
 
 // Exit codes
 const (
-	ExitSuccess       = 0
-	ExitInvalidEmail  = 1
+	ExitSuccess        = 0
+	ExitInvalidEmail   = 1
 	ExitErrorOrBlocked = 2
 )
 
@@ -140,4 +140,3 @@ func (a *App) printHelp() {
 	fmt.Fprintf(a.Stderr, "  cat emails.txt | mxping [flags]\n\n")
 	fmt.Fprintf(a.Stderr, "Run 'mxping -h' to see all available flags and options.\n")
 }
-

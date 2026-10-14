@@ -66,4 +66,3 @@ func TestApp_Run_SingleInvalid(t *testing.T) {
 		t.Errorf("expected INVALID in output, got: %s", stdout.String())
 	}
 }
-
